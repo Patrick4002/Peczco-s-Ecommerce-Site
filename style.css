@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+:root {
+    --main-text-color: #000;
+    --sub-text-color: crimson;
+    --main-color-hover: crimson;
+    --main-color-rating:#ff8c00;
+    --main-btn-hover:#000;
+    --main-border: 2px solid #000;
+    --main-transtion: all .3s ease;
+    --main-grid-template-column: repeat(auto-fit,minmax(250px,1fr));
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Oswald", sans-serif;
+}
+.container {
+    max-width: 1224px;
+    padding: 0 12px;
+    margin: auto;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: var(--main-transtion);
+}
+header.sticky {
+    background-color: #fff;
+}
+.header-wraper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-logo img {
+    max-width: 130px;
+}
+.header-nav {
+    display: flex;
+}
+.header-nav a {
+    color: var(--main-text-color);
+    padding: 0 20px;
+    transition: var(--main-transtion);
+}
+.header-nav a:hover {
+    color: var(--main-color-hover);
+}
+.header-icon i {
+    padding: 0 60px;
+    font-size: larger;
+    transition: var(--main-transtion);
+    color: var(--main-text-color);
+}
+.header-icon i:hover {
+    color: var(--main-color-hover);
+}
+/* banner-top */
+.banner-top {
+    width: 100%;
+    height: 100vh;
+    background-image: url('/images/WK6-Banner-AU-D-2_2400x.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.banner-top-text {
+    width: 100%;
+}
+.banner-top-text h3 {
+    color: var(--sub-text-color);
+}
+.banner-top-text h1 {
+    text-transform: capitalize;
+    font-size: 45px;
+    margin: 10px 0 30px;
+}
+.main-btn {
+    color: var(--main-text-color);
+    border: var(--main-border);
+    padding: 10px 15px;
+    transition: var(--main-transtion)
+}
+.main-btn i {
+    vertical-align: middle;
+}
+.main-btn:hover {
+    background-color: var(--main-btn-hover);
+    color: #fff;
+}
+/* Hot-product */
+.section-title h2 {
+    text-align: center;
+    padding: 30px 0;
+}
+.section-title h2 span {
+    color: var(--sub-text-color);
+}
+.hot-product-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    justify-content: center;
+    gap: 20px;
+}
+.hot-product-item img {
+    width: 100%;
+    transition: var(--main-transtion);
+}
+.hot-product-item {
+    position: relative;
+}
+.hot-product-item img:hover {
+    transform: scale(0.9);
+}
+.hot-product-item h5 {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: crimson;
+    padding: 6px 12px;
+    color: white;
+    border-radius: 5px;   
+}
+.hot-product-item > i {
+    position: absolute;
+    right: 0;
+    bottom: 12px;
+    font-size: larger;
+    cursor: pointer;   
+    transition: var(--main-transtion);
+}
+.hot-product-item > i:hover {
+    color: var(--main-color-hover);
+}
+.hot-product-item-rating > i {
+    color: var(--main-color-rating);
+}
+.hot-product-item-price > p {
+    font-weight: bolder;
+}
+.hot-product-item-price > h4 {
+    font-weight: normal;
+}
+/* review */
+.review {
+    margin: 30px 0;
+    background: #d3deef;
+}
+.review-content {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.review-content img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+/* New */
+.news-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    justify-content: space-between;
+    gap: 20px;
+}
+.news-items img {
+    width: 100%;
+    border-radius: 10px;
+}
+.news-items h5 {
+    margin: 12px 0;
+}
+.news-items p {
+    text-align: justify;
+    margin-top: 12px;
+}
+.news-items h6 {
+    font-weight: bold;
+    margin-top: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.news-items h6:hover {
+    color: var(--main-color-hover);
+}
+/* footer */
+footer {
+    margin-top: 30px;
+    padding: 30px 0;
+    background: #d3deef;
+}
+.footer-items {
+    display: grid;
+    grid-template-columns: var(--main-grid-template-column);
+    justify-content: space-between;
+    gap: 20px;
+}
+.footer-items .footer-item:first-child img {
+    width: 150px;
+}
+.footer-items .footer-item:nth-child(2) p:hover, .footer-item:nth-child(3) p:hover {
+    color: var(--main-color-hover);
+    cursor: pointer;
+}
+.footer-item h2 {
+    margin-bottom: 12px;
+}
+.footer-item p {
+    line-height: 25px;
+}
+.subscribe-form {
+    position: relative;
+}
+.subscribe-form input {
+    border: none;
+    height: 30px;
+    padding-left: 12px;
+    outline: none;
+}
+.subscribe-form button {
+    height: 30px;
+    border: none;
+    padding: 0 12px;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+}
+.social-box {
+    margin-top: 20px;
+}
+.social-box i {
+    font-size: larger;
+    margin-right: 6px;
+    cursor: pointer;
+    transition: var(--main-transtion);
+}
+.social-box i:hover {
+    transform: scale(1.3);
+
+}
+/* footer-bottom */
+.footer-bottom {
+    text-align: center;
+    background-color: black;
+    color: #ddd;
+    padding: 12px 0;
+}
+/* Responsive */
+.menu-bar {
+    visibility: hidden;
+}
+@media(max-width:700px) 
+{
+    .header-nav a {
+        padding: 0 12px;
+    }
+    .banner-top-text h1 {
+        font-size: 35px;
+    }
+} 
+@media(max-width:600px) 
+{
+    #menu-bar {
+        visibility: visible;
+    }
+    .banner-top-text h1 {
+        font-size: 30px;
+    }
+    .header-nav {
+        position: absolute;
+        top: 100%;
+        width: 300px;
+        height: 100vh;
+        background-color: #d3deef;
+        right: -100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 0;
+        transition: var(--main-transtion);
+    }
+    .header-nav a {
+        display: block;
+        padding: 18px 0;
+    }
+    .header-nav.active {
+        right: 0;
+    }
+} 
